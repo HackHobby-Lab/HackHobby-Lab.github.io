@@ -39,7 +39,6 @@ header {
   font-family: 'Michroma', sans-serif;
 }
 
-/* Dropdown Menu Styles */
 nav {
   position: relative;
 }
@@ -58,7 +57,6 @@ nav {
   transition: 0.4s;
 }
 
-/* Hide the dropdown menu by default */
 .dropdown-menu {
   list-style: none;
   position: absolute;
@@ -72,6 +70,7 @@ nav {
   gap: 0;
   padding: 0;
   margin: 0;
+  z-index: 1000; /* Ensure it's on top */
 }
 
 .dropdown-menu li {
@@ -344,6 +343,7 @@ nav.active .dropdown-menu {
     text-align: center;
     margin-bottom: 1rem;
     position: static;
+    top: 10%;
   }
 
   .passionate, .hobbyist, .description {
