@@ -9,3 +9,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
   });
   
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  });
+  
+  

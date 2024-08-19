@@ -16,10 +16,14 @@
         <div class="container">
           <div class="logo">Hamza</div>
           <nav>
-            <ul>
+            <div class="menu-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="dropdown-menu">
               <li><a href="#home">Home</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -27,48 +31,21 @@
           <a href="resources/HAMZA REHMAN.pdf" download="Hamza Rehman CV" class="download-cv">Download CV</a>
         </div>
       </header>
-      <!-- Grid Overlay -->
+
+      <!-- Hero Content -->
       <div class="grid-overlay"></div>
-
-      <!-- Background Image -->
       <img src="resources/AKA.png" alt="Background Image" class="background-image">
-
-      <!-- Content Container -->
       <div class="content-container">
-        <!-- Profile Image -->
         <img src="resources/Hero Image.png" alt="Profile Image" class="profile-img">
-
-        <!-- Social Icons -->
         <div class="social-icons">
-          <a href="https://github.com/Builtfor-developers" aria-label="GitHub">
-            <img src="resources/GitHub.png" alt="GitHub">
-          </a>
-          <a href="https://www.instagram.com/hackhobby_lab/" aria-label="Instagram">
-            <img src="resources/Instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.linkedin.com/in/hamza-rehman-awan/" aria-label="LinkedIn">
-            <img src="resources/LinkedIn.png" alt="LinkedIn">
-          </a>
+          <a href="https://github.com/Builtfor-developers" aria-label="GitHub"><img src="resources/GitHub.png" alt="GitHub"></a>
+          <a href="https://www.instagram.com/hackhobby_lab/" aria-label="Instagram"><img src="resources/Instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/hamza-rehman-awan/" aria-label="LinkedIn"><img src="resources/LinkedIn.png" alt="LinkedIn"></a>
         </div>
-
-        <!-- Description Text -->
-        <div class="description">
-          I have educational background in Biomedical Engineering and expertise in Embedded electronics both as Hobbyist
-          and Professionally.
-        </div>
-
-        <!-- Passionate Text -->
+        <div class="description">I have educational background in Biomedical Engineering and expertise in Embedded electronics both as Hobbyist and Professionally.</div>
         <div class="passionate">Passionate</div>
-
-        <!-- HackHobby Lab Text -->
         <div class="hackhobby-lab">HackHobby Lab</div>
-
-        <!-- Hobbyist Text -->
-        <div class="hobbyist">
-          Hobbyist.
-        </div>
-
-        <!-- Hero Text -->
+        <div class="hobbyist">Hobbyist.</div>
         <div class="name">
           <div class="hiya-im">Hi Ya! I’m</div>
           <div class="hamza-rehman">Hamza Rehman</div>
@@ -106,9 +83,31 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-description">Provide contact details or a form here.</p>
-        <!-- Add your contact form or details -->
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-description">Get in touch via email or follow me on my social media channels.</p>
+        <div class="contact-form">
+          <form action="your-email-endpoint" method="POST">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+        <div class="social-links">
+          <p>Or connect with me on social media:</p>
+          <a href="https://github.com/Builtfor-developers" aria-label="GitHub"><img src="resources/GitHub.png" alt="GitHub"></a>
+          <a href="https://www.instagram.com/hackhobby_lab/" aria-label="Instagram"><img src="resources/Instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/hamza-rehman-awan/" aria-label="LinkedIn"><img src="resources/LinkedIn.png" alt="LinkedIn"></a>
+        </div>
       </div>
     </section>
 
