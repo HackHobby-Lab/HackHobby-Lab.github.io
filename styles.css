@@ -69,11 +69,11 @@ nav ul li a:hover {
   left: 10%;
   width: 80%;
   height: 80%;
-  pointer-events: none; /* Allows interactions with elements beneath the grid */
+  pointer-events: none;
   background-image: linear-gradient(to right, rgba(8, 8, 8, 0.05) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(8, 8, 8, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px; /* Adjust the size of the grid cells */
-  z-index: 1; /* Ensure it is above the background image but below other content */
+  background-size: 40px 40px;
+  z-index: 1;
 }
 
 /* Hero Section */
@@ -105,8 +105,9 @@ nav ul li a:hover {
 }
 
 .profile-img {
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 70%;
 }
 
@@ -129,15 +130,19 @@ nav ul li a:hover {
 }
 
 /* Text Sections */
-.description {
-  width: 310px;
+.description, .passionate, .hackhobby-lab, .hobbyist, .name {
   position: absolute;
-  right: 10%;
-  top: 20%;
+}
+
+.description {
+  width: 100%;
+  max-width: 310px;
   text-align: right;
   color: #0d2f3f;
   font-size: 18px;
   line-height: 28px;
+  right: 5%;
+  top: 20%;
 }
 
 .passionate {
@@ -151,30 +156,24 @@ nav ul li a:hover {
   text-transform: uppercase;
   line-height: 26px;
   word-wrap: break-word;
-  position: absolute;
-  right: 10%;
+  right: 5%;
   top: 45%;
 }
 
 .hackhobby-lab {
-  width: 308px;
-  height: 42px;
+  max-width: 308px;
+  height: auto;
   color: rgba(0, 0, 0, 0.50);
   font-size: 48px;
   font-family: Calibri, sans-serif;
   font-weight: 700;
   line-height: 58px;
-  word-wrap: break-word;
-  position: absolute;
-  align-items: left;
+  left: 5%;
   bottom: 20%;
-  left: 10%;
 }
 
-
 .hobbyist {
-  position: absolute;
-  right: 10%;
+  right: 5%;
   top: 75%;
   color: #286f6c;
   font-size: 26px;
@@ -183,9 +182,8 @@ nav ul li a:hover {
 }
 
 .name {
-  width: 392px;
-  position: absolute;
-  left: 10%;
+  max-width: 392px;
+  left: 5%;
   top: 20%;
   display: flex;
   flex-direction: column;
@@ -203,7 +201,169 @@ nav ul li a:hover {
 .hamza-rehman {
   color: black;
   font-size: 48px;
-  font-family:  Calibri;
+  font-family: Calibri;
   font-weight: 600;
   line-height: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description {
+    font-size: 16px;
+    right: 5%;
+  }
+
+  .hackhobby-lab {
+    font-size: 36px;
+    left: 5%;
+  }
+  
+  .hiya-im, .hamza-rehman {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .social-icons {
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .hackhobby-lab {
+    font-size: 28px;
+  }
+  
+  .hiya-im, .hamza-rehman {
+    font-size: 28px;
+  }
+
+  .hero-section {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 90%;
+  }
+
+  .name {
+    text-align: center;
+    margin-bottom: 90%;
+    position: static;
+  }
+
+  .hackhobby-lab {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: static;
+  }
+
+  .passionate {
+    width: auto;
+    text-align: center;
+    margin-top: 1rem;
+    position: static;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .hobbyist {
+    text-align: center;
+    margin-top: 1rem;
+    position: static;
+  }
+
+  .description {
+    text-align: center;
+    margin-top: 1rem;
+    position: static;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .passionate,
+  .profile-img {
+    margin: 1rem 0;
+  }
+  
+  nav ul {
+    display: none;
+  }
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav ul.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+/* General Section Styling */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #0d2f3f;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #555;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 0.3rem 0;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #0d2f3f;
+  color: #f8f7f1;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
+footer p {
+  margin: 0;
 }
